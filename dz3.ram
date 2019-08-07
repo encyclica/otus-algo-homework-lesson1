@@ -1,4 +1,4 @@
-<input> 8 15 1 112 0 9 15 3 4
+<input> 1 100
 ; r1 - N, number of the numbers
 ; r2 - i, cycle counter
 ; r3 - k, interior cycle counter
@@ -15,6 +15,7 @@ read 1
 ; ----------------------------------------------------------------------
 ; for (r2=N; r2>0; r2--) { r4=r2+6; read & store r[r4]; }
 load 1 ; N
+jz TheEnd
 store 2 ; i
 
 CycleForInput:
@@ -94,4 +95,5 @@ sub =1
 store 2
 jgtz CycleForOutput
 
+TheEnd:
 halt
